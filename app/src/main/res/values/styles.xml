@@ -1,0 +1,30 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Hijau</item>
+        <item name="colorPrimaryDark">@color/Orange</item>
+        <item name="colorAccent">@color/Orange</item>
+    </style>
+    <!-- Tambah Style  -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+    <style name="AppTheme.PopupOverlay"
+        parent="ThemeOverlay.AppCompat.Light"
+        />
+    <style name="Login" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/Hijau</item>
+        <item name="colorButtonNormal">@color/biru</item>
+    </style>
+    <style name="Kalkulator" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/Hijau</item>
+        <item name="colorButtonNormal">@color/Orange</item>
+    </style>
+
+
+</resources>

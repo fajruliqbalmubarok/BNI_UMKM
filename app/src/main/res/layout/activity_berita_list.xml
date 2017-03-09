@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+
+    android:foreground="?attr/selectableItemBackground"
+    >
+
+    <LinearLayout
+        android:background="@color/Putih"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            >
+            <TextView
+                android:layout_weight="3"
+                android:textColor="@color/Hijau"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="JUDUL MRUPAKAN SIMBOL AKU CINT"
+                android:id="@+id/judul"
+                />
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="140dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/gambar"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/Hijau"
+                android:text="Deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/deskripsi"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
