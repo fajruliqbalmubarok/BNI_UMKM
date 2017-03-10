@@ -3,47 +3,12 @@
 
     <item
         is-multidex="false"
-        jar="/Users/ahmadroihan/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/ahmadroihan/Documents/BNIFIX/app/build/intermediates/pre-dexed/debug/library-2.4.0_e76bced1397b3430248f4d9f456b88189f46a06f.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ahmadroihan/.android/build-cache/0cdf3fbb863c73f690385e86fe63806de48d4a7f/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
-        <dex dex="/Users/ahmadroihan/Documents/BNIFIX/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cecc41598c16d67c413aa1cf2c57256e73beaeef/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ahmadroihan/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="/Users/ahmadroihan/Documents/BNIFIX/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_25d694c9c117eec465e07933ad9518e8a5cd4fcf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/ahmadroihan/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/ahmadroihan/Documents/BNIFIX/app/build/intermediates/transforms/dex/debug/folders/1000/10/library-2.4.0_e76bced1397b3430248f4d9f456b88189f46a06f/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ahmadroihan/.android/build-cache/0cdf3fbb863c73f690385e86fe63806de48d4a7f/output/jars/classes.jar"
+        jar="C:\Users\Fajrul\.android\build-cache\35f24220545f430c46f7ae349c6f47f09ee0f79d\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+<<<<<<< HEAD
         <dex dex="/Users/ahmadroihan/Documents/BNIUMKM/app/build/intermediates/pre-dexed/debug/classes_cecc41598c16d67c413aa1cf2c57256e73beaeef.jar" />
     </item>
     <item
@@ -324,6 +289,9 @@
         revision="25.0.0"
         sha1="49eb3ad545e7701234e4dd83db8dc1344b577f23">
         <dex dex="/Users/ahmadroihan/Documents/BNIFIX/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0_68c9acc87f3d918cb687f04507f7b9814b9c7ef6.jar" />
+=======
+        <dex dex="D:\project\BNI_UMKM\app\build\intermediates\pre-dexed\debug\classes_c14924f4f16adaa2038c37ac352331a4492e2d8d.jar" />
+>>>>>>> e097de1d9c662a96f2c1dd52e2d06afecf8ae473
     </item>
 
 </items>

@@ -7,12 +7,16 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <!-- tambahan -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".MainActivity">
 
         </activity>
@@ -20,6 +24,10 @@
 
 
         </activity>
+=======
+        <activity android:name=".MainActivity" />
+        <activity android:name=".login" />
+>>>>>>> e097de1d9c662a96f2c1dd52e2d06afecf8ae473
         <activity android:name=".user.berandauser" />
         <activity android:name=".SplashScreen">
 
@@ -32,47 +40,48 @@
         <activity
             android:name=".Profile"
             android:label="PROFILE"
-            android:theme="@style/Hafsah"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Hafsah">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-
-
-                          </activity>
-
+        </activity>
         <activity
             android:name=".Transaksi"
             android:label="TRANSAKSI"
-            android:theme="@style/Hafsah"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Hafsah">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-
-                     </activity>
-
+        </activity>
         <activity
             android:name=".Record"
             android:label="RECORD"
-            android:theme="@style/Hafsah"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Hafsah">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
+<<<<<<< HEAD
 
 
         </activity>
 
+=======
+        </activity>
+>>>>>>> e097de1d9c662a96f2c1dd52e2d06afecf8ae473
         <activity
-                android:name=".TransaksiBank"
-                android:label="TRANSAKSI BANK"
-                android:theme="@style/Hafsah"
-                android:parentActivityName=".MainActivity">
-                <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MainActivity" />
-            </activity>
-          </application>
+            android:name=".TransaksiBank"
+            android:label="TRANSAKSI BANK"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Hafsah">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".kalkulatorguest" />
+        <activity android:name=".petunjukguest"></activity>
+    </application>
 
 </manifest>

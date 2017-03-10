@@ -42,7 +42,10 @@ public class SplashScreen extends AppCompatActivity {
                 }else{
                     //closing the timer
                     timer.cancel();
+<<<<<<< HEAD
 
+=======
+>>>>>>> e097de1d9c662a96f2c1dd52e2d06afecf8ae473
                     Intent intent =new Intent(SplashScreen.this,login.class);
                     startActivity(intent);
                     // close this activity

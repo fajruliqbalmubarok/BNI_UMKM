@@ -8,14 +8,29 @@ public class config {
     private static final ip is = new ip();
     private static final String ipku = is.ipstatic();
 
+    public static final String LOGIN_URL = ipku + "/new_login.php";
+    // Variabel untuk definisikan Username dan password methode POST sesuai dengan yang di : new_login.php
+    public static final String KEY_LOGIN = "nama_pelanggan";
+    public static final String KEY_PASSWORD = "pass_pelanggan";
 
-    //private static final String ROOT_URL = "http://192.168.43.139/gokost";
+    // Jika respon server adalah sukses login
+    public static final String LOGIN_SUCCESS = "success";
+
+    //Kunci untuk Sharedpreferences
+    public static final String SHARED_PREF_NAME = "myloginapp";
+
+    //Ini digunakan untuk store username jika User telah Login
+    public static final String EMAIL_SHARED_PREF = "idLogin";
+
+    // Ini digunakan untuk store sharedpreference untuk cek user melakukan login atau tidak
+    public static final String LOGGEDIN_SHARED_PREF = "loggedin";
+
 
     public static final String URL_ADD = ipku + "/create.php";
     // Link Untuk Tampil Data
     //public static final String URL_GET_ALL = ipku + "/read.php";
     // Link untuk Update data Profil
-   // public static final String URL_UPDATE_EMP = ipku + "/update_profil.php";
+    // public static final String URL_UPDATE_EMP = ipku + "/update_profil.php";
 
 
     // Field yang digunakan untuk dikirimkan ke Database, sesuaikan saja dengan Field di Tabel Mahasiswa
