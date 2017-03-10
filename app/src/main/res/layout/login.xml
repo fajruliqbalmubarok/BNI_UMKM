@@ -1,96 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Putih"
     android:scrollbars="vertical">
-    <LinearLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/Putih"
         android:orientation="vertical"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
+
         <ImageView
-            android:layout_marginTop="30dp"
             android:layout_width="400dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:src="@drawable/logoatas"
-            />
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logoatas" />
 
         <EditText
-            android:paddingRight="220dp"
-            android:foregroundGravity="left"
-            android:layout_gravity="center"
             android:id="@+id/nama_pelanggan"
             android:layout_width="340dp"
             android:layout_height="40dp"
-            android:textColorHint="@color/hitam"
-            android:hint="username"
+            android:layout_gravity="center"
             android:background="@drawable/rounded_border_edittext"
-            android:gravity="center" >
+            android:foregroundGravity="left"
+            android:gravity="center"
+            android:hint="username"
+            android:paddingRight="220dp"
+            android:textColorHint="@color/hitam">
 
             <requestFocus />
         </EditText>
+
         <EditText
-            android:paddingRight="220dp"
-            android:inputType="textPassword"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
             android:id="@+id/pass_pelanggan"
             android:layout_width="340dp"
             android:layout_height="40dp"
-            android:textColorHint="@color/hitam"
-            android:hint="password"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_border_edittext"
-            android:gravity="center" >
+            android:gravity="center"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:paddingRight="220dp"
+            android:textColorHint="@color/hitam">
 
             <requestFocus />
         </EditText>
 
         <Button
             android:id="@+id/masuk_pelanggan"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
             android:layout_width="230dp"
             android:layout_height="50dp"
-            android:text="LOG IN"
-            android:textStyle="bold"
-            android:textColor="@color/hitam"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:background="@drawable/login"
-            />
+            android:text="LOG IN"
+            android:textColor="@color/hitam"
+            android:textStyle="bold" />
 
         <Button
+            android:id="@+id/kalkulator"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            android:layout_gravity="center"
-            android:layout_width="230dp"
-            android:layout_height="50dp"
-            android:textColor="@color/hitam"
-            android:text="kalkulator"
-            android:textStyle="bold"
             android:background="@drawable/kalkulator"
+            android:text="kalkulator"
+            android:textColor="@color/hitam"
+            android:textStyle="bold"
 
             />
+
         <Button
-            android:id="@+id/Register"
-            android:layout_marginTop="10dp"
-android:background="@drawable/register"
-            android:layout_gravity="center"
+            android:id="@+id/petunjuk"
             android:layout_width="230dp"
             android:layout_height="50dp"
-            android:text="Register"
-            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/register"
+            android:text="Petunjuk Peminjaman"
             android:textColor="@color/hitam"
+            android:textStyle="bold"
 
             />
     </LinearLayout>
-    
-
-
-
 
 
 </ScrollView>

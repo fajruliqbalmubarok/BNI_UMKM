@@ -21,9 +21,12 @@ import android.widget.Toast;
 
 import com.bni.umkm.bniumkm.DataSQLite.DataHelper;
 import com.bni.umkm.bniumkm.MainActivity;
+import com.bni.umkm.bniumkm.Profile;
 import com.bni.umkm.bniumkm.R;
+import com.bni.umkm.bniumkm.Record;
+import com.bni.umkm.bniumkm.Transaksi;
+import com.bni.umkm.bniumkm.config.config;
 import com.bni.umkm.bniumkm.login;
-import com.bni.umkm.bniumkm.config.koneksi;
 import com.bni.umkm.bniumkm.tabadapter;
 
 public class berandauser extends AppCompatActivity {
@@ -34,10 +37,11 @@ public class berandauser extends AppCompatActivity {
     private Toolbar tl;
 
     DataHelper dbcenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.finaly_layout);
+        setContentView(R.layout.berandauser);
         tl = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(tl);
         ProsesNavigasi();
@@ -65,7 +69,6 @@ public class berandauser extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
             }
 
             @Override
@@ -76,6 +79,7 @@ public class berandauser extends AppCompatActivity {
         });
 
     }
+
     public void ProsesNavigasi() {
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -84,23 +88,33 @@ public class berandauser extends AppCompatActivity {
 
                 int id = menuItem.getItemId();
 
+
                 switch (id) {
                     case R.id.profile:
                         Toast.makeText(getApplicationContext(), "Profile", Toast.LENGTH_SHORT).show();
                         dr.closeDrawers();
+                        Intent h=null;
+                        h = new Intent(berandauser.this, Profile.class);
+                        startActivity(h);
                         break;
                     case R.id.record:
                         Toast.makeText(getApplicationContext(), "Record", Toast.LENGTH_SHORT).show();
                         dr.closeDrawers();
+                        Intent i=null;
+                        i = new Intent(berandauser.this, Record.class);
+                        startActivity(i);
                         break;
                     case R.id.transaksi:
                         Toast.makeText(getApplicationContext(), "Transaksi", Toast.LENGTH_SHORT).show();
                         dr.closeDrawers();
+                        Intent a=null;
+                        a = new Intent(berandauser.this, Transaksi.class);
+                        startActivity(a);
                         break;
                     case R.id.logout:
                         Toast.makeText(getApplicationContext(), "Logout", Toast.LENGTH_SHORT).show();
                         dr.closeDrawers();
-                       logout();
+                        logout();
                 }
                 return true;
             }
@@ -125,6 +139,7 @@ public class berandauser extends AppCompatActivity {
         dr.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
     }
+
     private void logout() {
         // Munculkan alert dialog apabila user ingin keluar aplikasi
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -135,22 +150,22 @@ public class berandauser extends AppCompatActivity {
                     public void onClick(DialogInterface arg0, int arg1) {
 
                         // Getting out
-                        SharedPreferences preferences = getSharedPreferences(koneksi.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                        SharedPreferences preferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
                         //Getting editor
                         SharedPreferences.Editor editor = preferences.edit();
 
                         // put nilai false untuk login
-                        editor.putBoolean(koneksi.LOGGEDIN_SHARED_PREF, false);
+                        editor.putBoolean(config.LOGGEDIN_SHARED_PREF, false);
 
                         // put nilai untuk username
-                        editor.putString(koneksi.EMAIL_SHARED_PREF, "");
+                        editor.putString(config.EMAIL_SHARED_PREF, "");
 
                         //Simpan ke haredpreferences
                         editor.commit();
                         SQLiteDatabase db = dbcenter.getWritableDatabase();
-                        db.execSQL("delete from member where 1");
+                        db.execSQL("delete from pelanggan where 1");
                         Intent launchNextActivity;
-                        launchNextActivity = new Intent(berandauser.this, MainActivity.class);
+                        launchNextActivity = new Intent(berandauser.this, login.class);
                         launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         launchNextActivity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Transaksi extends AppCompatActivity {
+    Button Transfer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +17,7 @@ public class Transaksi extends AppCompatActivity {
         ActionBar menu=getSupportActionBar();
         menu.setDisplayShowHomeEnabled(true);
         menu.setDisplayHomeAsUpEnabled(true);
-
+        transferbank();
 //        Button Transaksi = (Button) findViewById(R.id.transaksi);
 //
 //       Transaksi.setOnClickListener(new View.OnClickListener() {
@@ -28,5 +29,17 @@ public class Transaksi extends AppCompatActivity {
 //           }
 //       });
 
+    }
+    public void transferbank(){
+        Transfer = (Button) findViewById(R.id.Transfer);
+        Transfer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View args0) {
+                // TODO Auto-generated method stub
+                Intent intent;
+                intent = new Intent(Transaksi.this, TransaksiBank.class);
+                startActivity(intent);
+            }
+        });
     }
 }

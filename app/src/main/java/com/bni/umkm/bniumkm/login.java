@@ -1,17 +1,17 @@
 package com.bni.umkm.bniumkm;
 
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -19,33 +19,49 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import java.util.HashMap;
-import java.util.Map;
 import com.bni.umkm.bniumkm.DataSQLite.DataHelper;
 import com.bni.umkm.bniumkm.config.config;
-import com.bni.umkm.bniumkm.config.koneksi;
 import com.bni.umkm.bniumkm.user.berandauser;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class login extends AppCompatActivity {
-    EditText nama_pelanggan,pass_pelanggan;
-    Button masuk_pelanggan;
+    EditText nama_pelanggan, pass_pelanggan;
+    Button masuk_pelanggan,kalkulator,petunjuk;
     private boolean loggedIn = false;
     DataHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        Button register = (Button) findViewById(R.id.Register);
-//        register.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(login.this, MainActivity.class);
-//                startActivity(i);
-//            }
-//        });
-
-
         loginmember();
-          }
+        kalkulator();
+        petunjuk();
+    }
+    public void kalkulator(){
+    kalkulator = (Button) findViewById(R.id.kalkulator);
+        kalkulator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View args0) {
+                // TODO Auto-generated method stub
+                Intent intent;
+                intent = new Intent(login.this, kalkulatorguest.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void petunjuk(){
+        petunjuk = (Button) findViewById(R.id.petunjuk);
+        petunjuk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View args0) {
+                // TODO Auto-generated method stub
+                Intent intent;
+                intent = new Intent(login.this, petunjukguest.class);
+                startActivity(intent);
+            }
+        });
+    }
     public void loginmember() {
         // TODO Auto-generated method stub
 
@@ -55,21 +71,23 @@ public class login extends AppCompatActivity {
         nama_pelanggan = (EditText)findViewById(R.id.nama_pelanggan);
         pass_pelanggan = (EditText)findViewById(R.id.pass_pelanggan);
         masuk_pelanggan = (Button)findViewById(R.id.masuk_pelanggan);
-
+        masuk_pelanggan = (Button)findViewById(R.id.masuk_pelanggan);
+        masuk_pelanggan = (Button)findViewById(R.id.masuk_pelanggan);
         dbHelper = new DataHelper(this);
         masuk_pelanggan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View args0) {
                 // TODO Auto-generated method stub
                 login();
+
             }
         });
     }
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences sharedPreferences = getSharedPreferences(koneksi.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        loggedIn = sharedPreferences.getBoolean(koneksi.LOGGEDIN_SHARED_PREF, false);
+        SharedPreferences sharedPreferences = getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        loggedIn = sharedPreferences.getBoolean(config.LOGGEDIN_SHARED_PREF, false);
 
         if (loggedIn) {
             Intent intent;
@@ -86,22 +104,22 @@ public class login extends AppCompatActivity {
         final String PassLogin = pass_pelanggan.getText().toString().trim();
 
 //        Buatkan Request Dalam bentuk String
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, koneksi.LOGIN_URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, config.LOGIN_URL,
                 new Response.Listener<String>() {
 
                     @Override
                     public void onResponse(String response) {
                         //Jika Respon server sukses
-                        if (response.equalsIgnoreCase(koneksi.LOGIN_SUCCESS)) {
+                        if (response.equalsIgnoreCase(config.LOGIN_SUCCESS)) {
                             //Buatkan sebuah shared preference
-                            SharedPreferences sharedPreferences = login.this.getSharedPreferences(koneksi.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                            SharedPreferences sharedPreferences = login.this.getSharedPreferences(config.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
                             //Buatkan Sebuah variabel Editor Untuk penyimpanan Nilai shared preferences
                             SharedPreferences.Editor editor = sharedPreferences.edit();
 
                             //Tambahkan Nilai ke Editor
-                            editor.putBoolean(koneksi.LOGGEDIN_SHARED_PREF, true);
-                            editor.putString(koneksi.EMAIL_SHARED_PREF, IdLogin);
+                            editor.putBoolean(config.LOGGEDIN_SHARED_PREF, true);
+                            editor.putString(config.EMAIL_SHARED_PREF, IdLogin);
 
                             //Simpan Nilai ke Variabel editor
                             editor.commit();
@@ -113,7 +131,7 @@ public class login extends AppCompatActivity {
 //                            intent.putExtra(MainActivity.terima,Id);
 
                             SQLiteDatabase db = dbHelper.getWritableDatabase();
-                            db.execSQL("insert into member(nama_pelanggan, pass_pelanggan) values('" +
+                            db.execSQL("insert into pelanggan(nama_pelanggan, pass_pelanggan) values('" +
                                     String.valueOf(nama_pelanggan.getText()) + "','" +
                                     String.valueOf(pass_pelanggan.getText()) + "')");
                             Toast.makeText(getApplicationContext(), "data sukses", Toast.LENGTH_LONG).show();
@@ -137,8 +155,8 @@ public class login extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 //Tambahkan Parameter username dan password untuk Request
-                params.put(koneksi.KEY_LOGIN, IdLogin);
-                params.put(koneksi.KEY_PASSWORD, PassLogin);
+                params.put(config.KEY_LOGIN, IdLogin);
+                params.put(config.KEY_PASSWORD, PassLogin);
 
                 //Kembalikan Nilai parameter
                 return params;
@@ -167,6 +185,5 @@ public class login extends AppCompatActivity {
             }, 3 * 1000);
         }
     }
-
 
 }

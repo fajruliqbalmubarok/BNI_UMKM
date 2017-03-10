@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.berandauser);
         tl = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(tl);
-        ProsesNavigasi();
+        //ProsesNavigasi();
 
         // tablayout
         tabLayout = (TabLayout) findViewById(R.id.tabLayout); //mengenalkan komponen tab layout yang berada di activity_main ke MainActivity.java
@@ -64,66 +64,66 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    public void ProsesNavigasi() {
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-
-                int id = menuItem.getItemId();
-
-                switch (id) {
-                    case R.id.profile:
-                        Toast.makeText(getApplicationContext(), "Profile", Toast.LENGTH_SHORT).show();
-                        dr.closeDrawers();
-                        Intent h=null;
-                        h = new Intent(MainActivity.this, Profile.class);
-                        startActivity(h);
-                        break;
-                    case R.id.record:
-                        Toast.makeText(getApplicationContext(), "Record", Toast.LENGTH_SHORT).show();
-                        dr.closeDrawers();
-                        Intent i=null;
-                        i = new Intent(MainActivity.this, Record.class);
-                        startActivity(i);
-                        break;
-                    case R.id.transaksi:
-                        Toast.makeText(getApplicationContext(), "Transaksi", Toast.LENGTH_SHORT).show();
-                        dr.closeDrawers();
-                        Intent a=null;
-                        a = new Intent(MainActivity.this, Transaksi.class);
-                        startActivity(a);
-                        break;
-                    case R.id.logout:
-                        Toast.makeText(getApplicationContext(), "Logout", Toast.LENGTH_SHORT).show();
-                        dr.closeDrawers();
-                        Intent z=null;
-                        z = new Intent(MainActivity.this, SplashScreen.class);
-                        startActivity(z);
-                break;
-                }
-                return true;
-            }
-        });
-        View header = navigationView.getHeaderView(0);
-        TextView tv_email = (TextView) header.findViewById(R.id.tv_email);
-        tv_email.setText("Fajrul Iqbal Mubarok");
-        dr = (DrawerLayout) findViewById(R.id.drawer);
-
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, dr, tl, R.string.drawer_open, R.string.drawer_close) {
-
-            @Override
-            public void onDrawerClosed(View v) {
-                super.onDrawerClosed(v);
-            }
-
-            @Override
-            public void onDrawerOpened(View v) {
-                super.onDrawerOpened(v);
-            }
-        };
-        dr.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-    }
+//    public void ProsesNavigasi() {
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
+//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(MenuItem menuItem) {
+//
+//                int id = menuItem.getItemId();
+//
+//                switch (id) {
+//                    case R.id.profile:
+//                        Toast.makeText(getApplicationContext(), "Profile", Toast.LENGTH_SHORT).show();
+//                        dr.closeDrawers();
+//                        Intent h=null;
+//                        h = new Intent(MainActivity.this, Profile.class);
+//                        startActivity(h);
+//                        break;
+//                    case R.id.record:
+//                        Toast.makeText(getApplicationContext(), "Record", Toast.LENGTH_SHORT).show();
+//                        dr.closeDrawers();
+//                        Intent i=null;
+//                        i = new Intent(MainActivity.this, Record.class);
+//                        startActivity(i);
+//                        break;
+//                    case R.id.transaksi:
+//                        Toast.makeText(getApplicationContext(), "Transaksi", Toast.LENGTH_SHORT).show();
+//                        dr.closeDrawers();
+//                        Intent a=null;
+//                        a = new Intent(MainActivity.this, Transaksi.class);
+//                        startActivity(a);
+//                        break;
+//                    case R.id.logout:
+//                        Toast.makeText(getApplicationContext(), "Logout", Toast.LENGTH_SHORT).show();
+//                        dr.closeDrawers();
+//                        Intent z=null;
+//                        z = new Intent(MainActivity.this, SplashScreen.class);
+//                        startActivity(z);
+//                break;
+//                }
+//                return true;
+//            }
+//        });
+//        View header = navigationView.getHeaderView(0);
+//        TextView tv_email = (TextView) header.findViewById(R.id.tv_email);
+//        tv_email.setText("Fajrul Iqbal Mubarok");
+//        dr = (DrawerLayout) findViewById(R.id.drawer);
+//
+//        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, dr, tl, R.string.drawer_open, R.string.drawer_close) {
+//
+//            @Override
+//            public void onDrawerClosed(View v) {
+//                super.onDrawerClosed(v);
+//            }
+//
+//            @Override
+//            public void onDrawerOpened(View v) {
+//                super.onDrawerOpened(v);
+//            }
+//        };
+//        dr.addDrawerListener(actionBarDrawerToggle);
+//        actionBarDrawerToggle.syncState();
+//    }
 }
 
