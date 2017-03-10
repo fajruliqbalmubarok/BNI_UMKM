@@ -18,10 +18,11 @@
             android:layout_width="400dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:src="@drawable/logo"
+            android:src="@drawable/logoatas"
             />
 
         <EditText
+            android:paddingRight="220dp"
             android:foregroundGravity="left"
             android:layout_gravity="center"
             android:id="@+id/nama_pelanggan"
@@ -35,6 +36,7 @@
             <requestFocus />
         </EditText>
         <EditText
+            android:paddingRight="220dp"
             android:inputType="textPassword"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
@@ -73,6 +75,7 @@
 
             />
         <Button
+            android:id="@+id/Register"
             android:layout_marginTop="10dp"
 android:background="@drawable/register"
             android:layout_gravity="center"

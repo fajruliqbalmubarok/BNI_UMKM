@@ -52,6 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
+
         app:menu="@menu/menu_beranda_member"/>
 
 </android.support.v4.widget.DrawerLayout>

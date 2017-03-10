@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.finaly_layout);
+        setContentView(R.layout.berandauser);
         tl = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(tl);
         ProsesNavigasi();
@@ -73,16 +73,34 @@ public class MainActivity extends AppCompatActivity {
                 int id = menuItem.getItemId();
 
                 switch (id) {
-                    case R.id.about:
-                        Toast.makeText(getApplicationContext(), "About", Toast.LENGTH_SHORT).show();
+                    case R.id.profile:
+                        Toast.makeText(getApplicationContext(), "Profile", Toast.LENGTH_SHORT).show();
                         dr.closeDrawers();
+                        Intent h=null;
+                        h = new Intent(MainActivity.this, Profile.class);
+                        startActivity(h);
                         break;
-                    case R.id.login:
-                        Toast.makeText(getApplicationContext(), "Login", Toast.LENGTH_SHORT).show();
+                    case R.id.record:
+                        Toast.makeText(getApplicationContext(), "Record", Toast.LENGTH_SHORT).show();
                         dr.closeDrawers();
                         Intent i=null;
-                        i = new Intent(MainActivity.this, login.class);
+                        i = new Intent(MainActivity.this, Record.class);
                         startActivity(i);
+                        break;
+                    case R.id.transaksi:
+                        Toast.makeText(getApplicationContext(), "Transaksi", Toast.LENGTH_SHORT).show();
+                        dr.closeDrawers();
+                        Intent a=null;
+                        a = new Intent(MainActivity.this, Transaksi.class);
+                        startActivity(a);
+                        break;
+                    case R.id.logout:
+                        Toast.makeText(getApplicationContext(), "Logout", Toast.LENGTH_SHORT).show();
+                        dr.closeDrawers();
+                        Intent z=null;
+                        z = new Intent(MainActivity.this, SplashScreen.class);
+                        startActivity(z);
+                break;
                 }
                 return true;
             }

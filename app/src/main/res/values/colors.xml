@@ -4,11 +4,18 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#a62b54</color>
     <color name="Putih">#FFFFFF</color>
-    <color name="Orange" >#fda025</color>
+  =
     <color name="Hijau" >#215e53</color>
-    <color name="Tua" >#2e544e</color>
+    <color name="Tua1" >#2e544e</color>
     <color name="Abu2" >#c4c7c7</color>
-    <color name="biru">#3896e9</color>
-    <color name="merah">#ea3030</color>
+
+
     <color name="hitam">#000</color>
+    <color name="Muda" >#caf9ff</color>
+    <color name="Remaja" >#025f6b</color>
+    <color name="Biru" >#3599db</color>
+    <color name="Tua" >#022a2e</color>
+    <color name="Orange" >#e67f24</color>
+    <color name="Merah" >#e74d3d</color>
+
 </resources>

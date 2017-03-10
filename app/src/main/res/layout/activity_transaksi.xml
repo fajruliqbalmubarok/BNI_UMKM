@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Muda"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Angsuran yang harus dibayar bulan ini :"
+            android:textColor="@color/hitam"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Rp. 10.0000"
+            android:background="@drawable/transaksi"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembayaran angsuran dapat dilakukan melalui :"
+            android:textColor="@color/hitam"
+            android:layout_marginTop="20dp"
+            />
+        <Button
+            android:id="@+id/Transfer"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="TRANFER BANK"
+            android:background="@drawable/buttontransaksi"
+            android:textColor="@color/hitam"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text=" INTERNET BANKING"
+            android:background="@drawable/buttontransaksi"
+            android:textColor="@color/hitam"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="CASH"
+            android:background="@drawable/buttontransaksi"
+            android:textColor="@color/hitam"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+</LinearLayout>

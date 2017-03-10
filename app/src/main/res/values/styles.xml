@@ -1,7 +1,13 @@
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/Hijau</item>
+        <item name="colorPrimary">@color/Remaja</item>
+        <item name="colorPrimaryDark">@color/Orange</item>
+        <item name="colorAccent">@color/Orange</item>
+    </style>
+    <style name="Hafsah" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Remaja</item>
         <item name="colorPrimaryDark">@color/Orange</item>
         <item name="colorAccent">@color/Orange</item>
     </style>
@@ -19,7 +25,7 @@
         />
     <style name="Login" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/Hijau</item>
-        <item name="colorButtonNormal">@color/biru</item>
+        <item name="colorButtonNormal">@color/Biru</item>
     </style>
     <style name="Kalkulator" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/Hijau</item>

@@ -9,26 +9,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/splash"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity
-            android:name=".login"
-          >
-
-        </activity>
-
-
-
+        <activity android:name=".login" />
         <activity android:name=".user.berandauser" />
         <activity android:name=".SplashScreen">
             <intent-filter>
@@ -36,8 +24,49 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
 
-    </application>
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="PROFILE"
+            android:theme="@style/Hafsah"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+
+                          </activity>
+
+        <activity
+            android:name=".Transaksi"
+            android:label="TRANSAKSI"
+            android:theme="@style/Hafsah"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+                     </activity>
+
+        <activity
+            android:name=".Record"
+            android:label="RECORD"
+            android:theme="@style/Hafsah"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" /></activity>
+
+        <activity
+                android:name=".TransaksiBank"
+                android:label="TRANSAKSI BANK"
+                android:theme="@style/Hafsah"
+                android:parentActivityName=".MainActivity">
+                <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity" />
+            </activity>
+          </application>
 
 </manifest>

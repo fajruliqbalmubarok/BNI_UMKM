@@ -290,6 +290,15 @@
         <dex dex="/Users/ahmadroihan/Documents/BNIFIX/app/build/intermediates/pre-dexed/debug/classes_efdafd40fdb50690c6a384c27b6ce13eb9757db4.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/ahmadroihan/Documents/BNIUMKM/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/ahmadroihan/Documents/BNIUMKM/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e506fccf57dddd70975e722bb8b518ff8f385bea/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/ahmadroihan/.android/build-cache/8291d50a159e5b95be451dcbaefff86ae9c71f0b/output/jars/classes.jar"
         jumboMode="false"
@@ -297,6 +306,15 @@
         revision="25.0.0"
         sha1="052802ed198178e7133de387fbc87d3f2998482a">
         <dex dex="/Users/ahmadroihan/Documents/BNIFIX/app/build/intermediates/pre-dexed/debug/classes_90f846cf82f915144843c9aba000df0c3b94ec47.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ahmadroihan/Documents/BNIUMKM/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a8e50e439585734c4223cb8c0eae4466669b214c">
+        <dex dex="/Users/ahmadroihan/Documents/BNIUMKM/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d7014e0b18a00a7ef058ed41f46d5b6e8db11d75/classes.dex" />
     </item>
     <item
         is-multidex="false"
