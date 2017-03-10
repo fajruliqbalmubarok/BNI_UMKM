@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
@@ -7,147 +8,161 @@
     android:background="@color/Muda"
 
     >
-    <LinearLayout
-        android:background="@color/Muda"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:scrollbars="vertical"
         >
+        <LinearLayout
+            android:background="@color/Muda"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No. KTP"
-            android:textColor="@color/hitam"
-            android:layout_marginTop="20dp"
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. KTP"
+                android:textColor="@color/hitam"
+                android:layout_marginTop="20dp"
+                />
 
-        <EditText
-            android:paddingLeft="10dp"
-            android:inputType="number"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="xxxxxx-xxxx-xxx-xxx"
-            android:background="@drawable/transaksi"
-            />
+            <EditText
+                android:paddingLeft="10dp"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="xxxxxx-xxxx-xxx-xxx"
+                android:background="@drawable/transaksi"
+                />
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. Transaksi "
+                android:textColor="@color/hitam"
+                android:layout_marginTop="5dp"
+                />
+            <EditText
+                android:paddingLeft="10dp"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="no. transaksi"
+                android:background="@drawable/transaksi"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pembayaran"
+                android:textColor="@color/hitam"
+                android:layout_marginTop="5dp"
+                />
+            <EditText
+                android:paddingLeft="10dp"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="jumlah pembayaran"
+                android:background="@drawable/transaksi"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bulan Ke "
+                android:textColor="@color/hitam"
+                android:layout_marginTop="5dp"
+                />
+            <EditText
+                android:paddingLeft="10dp"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="bulan ke"
+                android:background="@drawable/transaksi"
+                /><TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No. Transaksi "
+            android:text="Tanggal Pembayaran "
             android:textColor="@color/hitam"
             android:layout_marginTop="5dp"
             />
-        <EditText
-            android:paddingLeft="10dp"
-            android:inputType="number"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="no. transaksi"
-            android:background="@drawable/transaksi"
-            />
-        <TextView
+            <EditText
+                android:paddingLeft="10dp"
+                android:inputType="date"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="tanggal pembayaran"
+                android:background="@drawable/transaksi"
+                /><TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pembayaran"
+            android:text="No. Rekening "
             android:textColor="@color/hitam"
             android:layout_marginTop="5dp"
             />
-        <EditText
-            android:paddingLeft="10dp"
-            android:inputType="number"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="jumlah pembayaran"
-            android:background="@drawable/transaksi"
-            />
-        <TextView
+            <EditText
+                android:paddingLeft="10dp"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="no. rekening pembayar"
+                android:background="@drawable/transaksi"
+                /><TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bulan Ke "
+            android:text="Nama Rekening "
             android:textColor="@color/hitam"
             android:layout_marginTop="5dp"
             />
-        <EditText
-            android:paddingLeft="10dp"
-            android:inputType="number"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="bulan ke"
-            android:background="@drawable/transaksi"
+            <EditText
+                android:paddingLeft="10dp"
+                android:inputType="text"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="nama rekening pembayar"
+                android:background="@drawable/transaksi"
+                />
             /><TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tanggal Pembayaran "
-        android:textColor="@color/hitam"
-        android:layout_marginTop="5dp"
-        />
-        <EditText
-            android:paddingLeft="10dp"
-            android:inputType="date"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="tanggal pembayaran"
-            android:background="@drawable/transaksi"
-            /><TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No. Rekening "
-        android:textColor="@color/hitam"
-        android:layout_marginTop="5dp"
-        />
-        <EditText
-            android:paddingLeft="10dp"
-            android:inputType="number"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="no. rekening pembayar"
-            android:background="@drawable/transaksi"
-            /><TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nama Rekening "
-        android:textColor="@color/hitam"
-        android:layout_marginTop="5dp"
-        />
-        <EditText
-            android:paddingLeft="10dp"
-            android:inputType="text"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="nama rekening pembayar"
-            android:background="@drawable/transaksi"
-            />
-        /><TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Foto "
-        android:textColor="@color/hitam"
-        android:layout_marginTop="5dp"
-        />
-        <Button
-            android:layout_marginTop="10dp"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UPLOAD"
-            android:background="@drawable/register"
+            android:text="Foto "
             android:textColor="@color/hitam"
-            android:textStyle="bold"
+            android:layout_marginTop="5dp"
             />
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="UPLOAD"
+                android:background="@drawable/register"
+                android:textColor="@color/hitam"
+                android:textStyle="bold"
+                />
+
+
+<TextView
+    android:layout_marginTop="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="20dp" />
+
+        </LinearLayout>
 
 
 
 
 
-    </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

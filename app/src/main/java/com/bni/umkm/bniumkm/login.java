@@ -34,18 +34,27 @@ public class login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        Button register = (Button) findViewById(R.id.Register);
-//        register.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(login.this, MainActivity.class);
-//                startActivity(i);
-//            }
-//        });
+       Register();
+
+
 
 
         loginmember();
           }
+
+    private void Register() {
+        Button register = (Button) findViewById(R.id.Register);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(login.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+    }
+
     public void loginmember() {
         // TODO Auto-generated method stub
 

@@ -4,7 +4,7 @@
     >
 
     <group android:checkableBehavior="single"
-        
+
         >
         <item
             android:id="@+id/profile"
@@ -13,7 +13,8 @@
         <item
             android:id="@+id/record"
             android:title="Record Transaksi"
-            android:icon="@drawable/ic_trash"/>
+            android:icon="@drawable/ic_trash"
+            />
         <item
             android:id="@+id/transaksi"
             android:title="Transaksi"
